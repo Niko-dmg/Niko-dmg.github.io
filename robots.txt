@@ -1,0 +1,14 @@
+# welcome to : Niko's blog
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /lib/
+Sitemap: https://niko-dmg.github.io/sitemap.xml
+
