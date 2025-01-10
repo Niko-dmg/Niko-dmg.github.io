@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>macOS上的包管理器——brew</title>
+      <link href="/2025/01/10/macOS%E4%B8%8A%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E2%80%94%E2%80%94brew/"/>
+      <url>/2025/01/10/macOS%E4%B8%8A%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E2%80%94%E2%80%94brew/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是homebrew？"><a href="#什么是homebrew？" class="headerlink" title="什么是homebrew？"></a>什么是homebrew？</h2><p>引用官网的介绍，homebrew是：<br>The Missing Package Manager for macOS (or Linux)<br><img src="/2025/01/10/macOS%E4%B8%8A%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E2%80%94%E2%80%94brew/brew.png"><br>翻译过来就是：<br>macOS（或 Linux）缺失的软件包的管理器<br>macOS本身不包含包管理器（当然你要是非说xcode-select –install也是的话那当我没说）</p><h2 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h2><h3 id="自动安装"><a href="#自动安装" class="headerlink" title="自动安装"></a>自动安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure><p>这条命令将自动安装，使用国内源</p><h3 id="手动安装（可选）"><a href="#手动安装（可选）" class="headerlink" title="手动安装（可选）"></a>手动安装（可选）</h3><p>首先</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure><p>安装Command Line Tools<br>再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export HOMEBREW_INSTALL_FROM_API=1</span><br><span class="line">export HOMEBREW_API_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&quot;</span><br><span class="line">export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&quot;</span><br><span class="line">export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span><br><span class="line">export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span><br><span class="line">git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install</span><br><span class="line"></span><br><span class="line">/bin/bash brew-install/install.sh</span><br><span class="line"></span><br><span class="line">rm -rf brew-install</span><br></pre></td></tr></table></figure><p>针对Apple silicon的用户：<br>···zsh<br>if test -r ~&#x2F;.bash_profile;then echo ‘eval “$(&#x2F;opt&#x2F;homebrew&#x2F;bin&#x2F;brew shellenv)”‘ &gt;&gt; ~&#x2F;.bash_profile;else touch ~&#x2F;.bash_profile &amp;&amp; echo ‘eval “$(&#x2F;opt&#x2F;homebrew&#x2F;bin&#x2F;brew shellenv)”‘ &gt;&gt; ~&#x2F;.bash_profile;fi</p><p>if test -r ~&#x2F;.zprofile;then echo ‘eval “$(&#x2F;opt&#x2F;homebrew&#x2F;bin&#x2F;brew shellenv)”‘ &gt;&gt; ~&#x2F;.zprofile;else touch ~&#x2F;.zprofile &amp;&amp; echo ‘eval “$(&#x2F;opt&#x2F;homebrew&#x2F;bin&#x2F;brew shellenv)”‘ &gt;&gt; ~&#x2F;.zprofile;fi</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个时候执行：</span><br><span class="line">```zsh</span><br><span class="line">brew -v</span><br></pre></td></tr></table></figure><p>查看是否安装完成</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科技 </tag>
+            
+            <tag> macOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FreeBSD安装踩坑</title>
       <link href="/2025/01/09/FreeBSD%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91/"/>
       <url>/2025/01/09/FreeBSD%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91/</url>
