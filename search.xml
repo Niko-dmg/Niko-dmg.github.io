@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>Arcaea的API逆向</title>
-      <link href="/2025/01/11/Arcaea%E7%9A%84API%E9%80%86%E5%90%91/"/>
-      <url>/2025/01/11/Arcaea%E7%9A%84API%E9%80%86%E5%90%91/</url>
-      
-        <content type="html"><![CDATA[<h2 id="这篇文章只是记录自己的逆向过程（写的时候甚至还没逆向完）"><a href="#这篇文章只是记录自己的逆向过程（写的时候甚至还没逆向完）" class="headerlink" title="这篇文章只是记录自己的逆向过程（写的时候甚至还没逆向完）"></a>这篇文章只是记录自己的逆向过程（写的时候甚至还没逆向完）</h2><h3 id="参考-https-blog-yinmo19-top-2024-11-13-Arcaea-API-地址逆向"><a href="#参考-https-blog-yinmo19-top-2024-11-13-Arcaea-API-地址逆向" class="headerlink" title="参考: https://blog.yinmo19.top/2024/11/13/Arcaea-API-地址逆向/"></a>参考: <a href="https://blog.yinmo19.top/2024/11/13/Arcaea-API-%E5%9C%B0%E5%9D%80%E9%80%86%E5%90%91/">https://blog.yinmo19.top/2024/11/13/Arcaea-API-地址逆向/</a></h3><h3 id="工具：hopper"><a href="#工具：hopper" class="headerlink" title="工具：hopper"></a>工具：hopper</h3><h2 id="开始逆向"><a href="#开始逆向" class="headerlink" title="开始逆向"></a>开始逆向</h2><p>首先在strings里找到auth&#x2F;login<br><img src="/2025/01/11/Arcaea%E7%9A%84API%E9%80%86%E5%90%91/auth.png"><br>进来xref选第一个<br><img src="/2025/01/11/Arcaea%E7%9A%84API%E9%80%86%E5%90%91/xref.png"><br>切到伪代码，command+F搜login，找到如下结构：<br><img src="/2025/01/11/Arcaea%E7%9A%84API%E9%80%86%E5%90%91/idx1.png" alt="这里sub被我改名成了idx"><br>建议和我一样按n改名为idx，然后搜idx</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Arcaea </tag>
-            
-            <tag> 科技 </tag>
-            
-            <tag> ios </tag>
-            
-            <tag> 音游 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>macOS上的包管理器——brew</title>
       <link href="/2025/01/10/macOS%E4%B8%8A%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E2%80%94%E2%80%94brew/"/>
       <url>/2025/01/10/macOS%E4%B8%8A%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E2%80%94%E2%80%94brew/</url>
